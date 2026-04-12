@@ -23,7 +23,8 @@ export default function Analyzer() {
       const token = localStorage.getItem('sentiment_token');
       const headers = token ? { Authorization: `Bearer ${token}` } : {};
       
-      const response = await axios.post('http://localhost:8080/api/analyze', { text }, { headers });
+      const baseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
+      const response = await axios.post(`${baseUrl}/api/analyze`, { text }, { headers });
       setResult(response.data);
     } catch (err) {
       console.error(err);

@@ -33,7 +33,7 @@ function App() {
               <BrainCircuit className="text-white w-6 h-6" />
             </div>
             <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
-              SentimentAI
+              Emotion Wizard
             </span>
           </Link>
           <div className="flex items-center space-x-6 text-sm font-medium">
@@ -80,7 +80,7 @@ function App() {
         
         {/* Footer */}
         <footer className="py-6 text-center text-slate-500 text-sm">
-          &copy; {new Date().getFullYear()} SentimentAI. Built for educational purposes.
+          &copy; {new Date().getFullYear()} Emotion Wizard. Built for educational purposes.
         </footer>
       </div>
     </Router>

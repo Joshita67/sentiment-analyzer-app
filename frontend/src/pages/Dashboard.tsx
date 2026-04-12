@@ -24,7 +24,8 @@ export default function Dashboard() {
       return;
     }
 
-    axios.get('http://localhost:8080/api/history', {
+    const baseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
+    axios.get(`${baseUrl}/api/history`, {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then((res) => {
